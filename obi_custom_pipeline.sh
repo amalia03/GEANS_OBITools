@@ -62,3 +62,7 @@ obi annotate -k COUNT -k sample $sample/dereplicated_sequences $sample/cleaned_m
 
 #Grep files that are longer than 100
 obi grep -p "len(sequence)>=100" $sample/cleaned_metadata_sequences $sample/denoised_sequences
+
+##Finally to export the filtered file:
+
+obi export $sample/denoised_sequences -o  $sample\_filtered.fa
